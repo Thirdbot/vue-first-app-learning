@@ -1,0 +1,30 @@
+<template>
+    <section>
+        <h2>My Friends</h2>
+        <ul>
+        </ul>
+    </section>
+</template>
+
+<script>
+export default {
+    data(){
+        return{
+            friends:[
+                {
+                    id:'manuel',
+                    name:'Manuel Lorenz',
+                    phone:'01234567890',
+                    email:'manuel@localhost.com'
+                },
+                {
+                    id:'julie',
+                    name:'Julie Jones',
+                    phone:'01234567890',
+                    email:'julie@localhost.com'
+                }
+            ]
+        }
+    }
+}
+</script>
