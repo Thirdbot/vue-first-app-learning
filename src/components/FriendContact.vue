@@ -3,6 +3,7 @@
         <h2>{{ name }}{{ IsFavorite ? '(Favorite)' : ''}}</h2>
         <button @click="toggleDetail">{{ detailAreVisible ? 'Hide':'Show' }}</button>
         <button @click="toggleFavorite">Is Favorite</button>
+        <button @click="delFriend">Delete</button>
         <ul v-if="detailAreVisible">
             <li><strong>Phone:</strong>{{phoneNumber}}</li>
             <li><strong>Email:</strong>{{emailAddress}}</li>
@@ -55,6 +56,9 @@ export default {
         },
         toggleFavorite(){
             this.$emit('toggle-favorite',this.id)          
+        },
+        delFriend(){
+            this.$emit('delete-friend',this.id);
         }
     }
 };
