@@ -1,4 +1,5 @@
 <template>
+
   <span class="badge" :class="classes">{{ caption }}</span>
 </template>
 
