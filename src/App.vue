@@ -2,6 +2,11 @@
 <template>
   <div>
     <the-header></the-header>
+
+    <button @click="setSeletedComponent('active-goals')">Active Goals</button>
+    <button @click="setSeletedComponent('manage-goals')">Manage Goals</button>
+    <component :is="seleted_components"></component>
+
     <badge-list></badge-list>
     <user-info
       :full-name="activeUser.name"
@@ -21,14 +26,19 @@
 import TheHeader from './components/TheHeader.vue';
 import BadgeList from './components/BadgeList.vue';
 import CourseGoals from './components/CourseGoals.vue';
+import ActiveGoals from './components/ActiveGoals.vue';
+import ManageGoals from './components/ManageGoals.vue';
 export default {
   components:{
     'the-header': TheHeader,
     'badge-list':BadgeList,
-    'course-goals':CourseGoals
+    'course-goals':CourseGoals,
+    'manage-goals':ManageGoals,
+    'active-goals':ActiveGoals
   },
   data() {
     return {
+      seleted_components:'active-goals',
       activeUser: {
         name: 'Maximilian Schwarzmüller',
         description: 'Site owner and admin',
@@ -37,6 +47,11 @@ export default {
       },
     };
   },
+  methods:{
+    setSeletedComponent(selected){
+      this.seleted_components = selected;
+    }
+  }
 };
 </script>
 
