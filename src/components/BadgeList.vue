@@ -2,6 +2,8 @@
   <section>
     <base-card>
     <template v-slot:header>
+    </template>
+    <template v-slot:default>
       <h2>Available Badges</h2>
       <ul>
         <li>

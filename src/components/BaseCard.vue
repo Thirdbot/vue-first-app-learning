@@ -1,6 +1,7 @@
 <template>
     <section>
       <slot name="header"></slot>
+      <slot></slot>
     </section>
 </template>
     
