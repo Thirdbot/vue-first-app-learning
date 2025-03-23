@@ -8,6 +8,11 @@
       :info-text="activeUser.description"
       :role="activeUser.role"
     ></user-info>
+    <course-goals :goals="activeUser.goals">
+      <template #default="slotProps">
+        <p>{{ slotProps.item }}</p>
+      </template>
+    </course-goals>
   </div>
 </template>
 
@@ -15,11 +20,12 @@
 <script>
 import TheHeader from './components/TheHeader.vue';
 import BadgeList from './components/BadgeList.vue';
-
+import CourseGoals from './components/CourseGoals.vue';
 export default {
   components:{
     'the-header': TheHeader,
-    'badge-list':BadgeList
+    'badge-list':BadgeList,
+    'course-goals':CourseGoals
   },
   data() {
     return {
@@ -27,6 +33,7 @@ export default {
         name: 'Maximilian Schwarzmüller',
         description: 'Site owner and admin',
         role: 'admin',
+        goals:['control everything','being good']
       },
     };
   },
