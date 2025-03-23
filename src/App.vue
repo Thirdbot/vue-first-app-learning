@@ -5,7 +5,9 @@
 
     <button @click="setSeletedComponent('active-goals')">Active Goals</button>
     <button @click="setSeletedComponent('manage-goals')">Manage Goals</button>
-    <component :is="seleted_components"></component>
+    <keep-alive>
+      <component :is="seleted_components"></component>
+    </keep-alive>
 
     <badge-list></badge-list>
     <user-info
