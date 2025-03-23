@@ -30,13 +30,14 @@ import BadgeList from './components/BadgeList.vue';
 import CourseGoals from './components/CourseGoals.vue';
 import ActiveGoals from './components/ActiveGoals.vue';
 import ManageGoals from './components/ManageGoals.vue';
+
 export default {
   components:{
     'the-header': TheHeader,
     'badge-list':BadgeList,
     'course-goals':CourseGoals,
     'manage-goals':ManageGoals,
-    'active-goals':ActiveGoals
+    'active-goals':ActiveGoals,
   },
   data() {
     return {
