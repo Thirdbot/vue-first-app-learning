@@ -1,7 +1,7 @@
+
 <template>
   <div>
     <the-header></the-header>
-    
     <badge-list></badge-list>
     <user-info
       :full-name="activeUser.name"
@@ -11,8 +11,16 @@
   </div>
 </template>
 
+
 <script>
+import TheHeader from './components/TheHeader.vue';
+import BadgeList from './components/BadgeList.vue';
+
 export default {
+  components:{
+    'the-header': TheHeader,
+    'badge-list':BadgeList
+  },
   data() {
     return {
       activeUser: {
