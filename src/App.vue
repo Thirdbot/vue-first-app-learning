@@ -25,7 +25,7 @@
 
 
 <script>
-import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/layout/TheHeader.vue';
 import BadgeList from './components/BadgeList.vue';
 import CourseGoals from './components/CourseGoals.vue';
 import ActiveGoals from './components/ActiveGoals.vue';
