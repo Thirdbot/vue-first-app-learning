@@ -1,0 +1,38 @@
+<template>
+    <li>
+        <base-card>
+        <div>
+            <header>
+                <h3>{{ title }}</h3>
+                <base-button mode="flat">Delete</base-button>
+            </header>
+        </div>
+        <p>{{ description }}</p>
+        <nav>
+            <a :href="link">View Resource</a>
+        </nav>
+    </base-card>
+    </li>
+</template>
+
+<script>
+
+export default{
+    props:['title','description','link']
+}
+</script>
+
+<style scoped>
+li {
+    margin:auto;
+    max-width:40rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    color: orangered;
+}
+</style>
