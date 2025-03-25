@@ -9,13 +9,18 @@
 </template>
 
 <script>
+import { inject } from 'vue';
 import LearningResource from './LearningResource.vue';
 
 export default{
     components:{
         'LearningResource':LearningResource
     },
-    props:['resources']
+    data(){
+        return{
+            resources:inject('resources')
+        }
+    }
 }
 </script>
 
